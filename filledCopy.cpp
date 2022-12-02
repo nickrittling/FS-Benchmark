@@ -9,10 +9,10 @@ int main()
 	std::ofstream of;
 	of.open("result.txt", std::ios::app);
 	if(!of) std::cout<<"File not found\n";
-	std::filesystem::remove_all("/mnt/TestDrive/Drive");
+	//std::filesystem::remove_all("/mnt/TestDrive/Drive");
 	auto start = std::chrono::high_resolution_clock::now();
 	std::ios_base::sync_with_stdio(false);
-	std::filesystem::copy("/home/nickr/TestStart", "/mnt/TestDrive/Drive");
+	std::filesystem::copy("/home/nickr/filledStart", "/mnt/TestDrive/Drive");
 	auto end = std::chrono::high_resolution_clock::now();
 	double time_taken = std::chrono::duration_cast<std::
 				chrono::nanoseconds>(end - start).count();
